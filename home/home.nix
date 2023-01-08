@@ -57,7 +57,7 @@
     hledger-ui
     ledger
 
-    # libreoffice
+    libreoffice
     pandoc
     texlive.combined.scheme-small
 
