@@ -67,8 +67,7 @@
 
   users.users.hnaderi = {
     isNormalUser = true;
-    extraGroups =
-      [ "wheel" "docker" "adbusers" "vboxusers" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [ "wheel" "docker" "adbusers" "vboxusers" "dialout" ];
     # shell = pkgs.fish; #TODO
   };
 
