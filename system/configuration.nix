@@ -63,12 +63,12 @@
     StateDirectory = "dnscrypt-proxy";
   };
 
-  # programs.fish.enable = true; #TODO
+  programs.fish.enable = true;
 
   users.users.hnaderi = {
     isNormalUser = true;
     extraGroups = [ "wheel" "docker" "adbusers" "vboxusers" "dialout" ];
-    # shell = pkgs.fish; #TODO
+    shell = pkgs.fish;
   };
 
   nixpkgs.config.allowUnfree = true;
@@ -92,7 +92,7 @@
       auto-optimise-store = true;
 
       # Required by Cachix to be used as non-root user
-      trusted-users = [ "root" "gvolpe" ];
+      trusted-users = [ "root" "hnaderi" ];
 
       experimental-features = [ "nix-command" "flakes" ];
 
