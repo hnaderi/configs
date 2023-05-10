@@ -29,8 +29,6 @@
     diceware
 
     sshuttle
-    v2ray
-    qv2ray
 
     fd
     shellcheck
@@ -58,8 +56,6 @@
     ledger
 
     libreoffice
-    pandoc
-    texlive.combined.scheme-small
 
     inkscape
     gimp
@@ -86,23 +82,15 @@
     fira-code
 
     docker-compose
-    # minikube
     kubectl
-    # octant
     kubernetes-helm
-    terraform
 
     wireshark
 
-    # openjdk11
-    # sbt
     dbeaver
 
-    postgresql_14
     python3
     nodejs_latest
-
-    # arduino
 
     webcamoid
     zeroad
@@ -156,7 +144,6 @@
 
   programs.tmux = {
     enable = true;
-    ## ToDo
   };
 
   programs.zsh = {
