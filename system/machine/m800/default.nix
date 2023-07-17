@@ -31,7 +31,7 @@
     networkmanager.dns = "none";
     extraHosts = ''
       192.168.1.14    rpi4
-      192.168.1.10    rpizw
+      192.168.1.2     rpizw
     '';
   };
   # https://github.com/NixOS/nixpkgs/issues/61230
