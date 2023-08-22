@@ -63,12 +63,12 @@
     StateDirectory = "dnscrypt-proxy";
   };
 
-  programs.fish.enable = true;
+  programs.zsh.enable = true;
 
   users.users.hnaderi = {
     isNormalUser = true;
     extraGroups = [ "wheel" "docker" "adbusers" "vboxusers" "dialout" ];
-    shell = pkgs.fish;
+    shell = pkgs.zsh;
   };
 
   nixpkgs.config.allowUnfree = true;
