@@ -14,10 +14,10 @@ let
     (home-manager.lib.homeManagerConfiguration {
       inherit pkgs;
 
-      modules = [{ inherit imports; }];
+      modules = [ { inherit imports; } ../home/base ];
     });
 
 in {
-  hnaderi = mkHome [ ../home/home.nix ];
-  matin = mkHome [ ../system/machine/matin/home.nix ];
+  hnaderi = mkHome [ ../home/personal.nix ];
+  matin = mkHome [ ../home/office.nix ];
 }

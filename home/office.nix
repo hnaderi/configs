@@ -1,8 +1,6 @@
 { config, pkgs, ... }:
 
 {
-  imports = [ ../../base/home.nix ];
-
   home.packages = with pkgs; [ docker-compose ];
 
   _module.args.email = "mail@hnaderi.dev";
