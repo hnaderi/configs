@@ -10,18 +10,14 @@ let
     config.allowUnfree = true;
   };
 
-  imports = [ ../home/home.nix ];
+  mkHome = imports:
+    (home-manager.lib.homeManagerConfiguration {
+      inherit pkgs;
+
+      modules = [{ inherit imports; }];
+    });
 
 in {
-  hnaderi = (home-manager.lib.homeManagerConfiguration {
-    inherit pkgs;
-
-    modules = [{ inherit imports; }];
-  });
-
-  matin = (home-manager.lib.homeManagerConfiguration {
-    inherit pkgs;
-
-    modules = [{ imports = [ ../system/machine/matin/home.nix ]; }];
-  });
+  hnaderi = mkHome [ ../home/home.nix ];
+  matin = mkHome [ ../system/machine/matin/home.nix ];
 }
