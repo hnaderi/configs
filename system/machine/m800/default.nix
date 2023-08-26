@@ -22,6 +22,33 @@
   #     lib.mkForce "none"; # networkmaneger not to overwrite /etc/resolv.conf
   # };
 
+  hardware.bluetooth.enable = true;
+
+  # Enable sound.
+  sound = {
+    enable = true;
+    mediaKeys.enable = true;
+  };
+
+  hardware.pulseaudio = {
+    enable = true;
+    package = pkgs.pulseaudioFull;
+  };
+
+  nixpkgs.config.packageOverrides = pkgs: {
+    vaapiIntel = pkgs.vaapiIntel.override { enableHybridCodec = true; };
+  };
+
+  hardware.opengl = {
+    enable = true;
+    extraPackages = with pkgs; [
+      intel-media-driver # LIBVA_DRIVER_NAME=iHD
+      vaapiIntel # LIBVA_DRIVER_NAME=i965 (older but works better for Firefox/Chromium)
+      vaapiVdpau
+      libvdpau-va-gl
+    ];
+  };
+
   networking = {
     nameservers = [ "127.0.0.1" "::1" ];
     # If using dhcpcd:
@@ -140,4 +167,12 @@
   '';
 
   programs.adb.enable = true;
+
+  # This value determines the NixOS release from which the default
+  # settings for stateful data, like file locations and database versions
+  # on your system were taken. It‘s perfectly fine and recommended to leave
+  # this value at the release version of the first install of this system.
+  # Before changing this value read the documentation for this option
+  # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
+  system.stateVersion = "20.03"; # Did you read the comment?
 }
