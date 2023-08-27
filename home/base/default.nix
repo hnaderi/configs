@@ -4,7 +4,7 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
-  imports = [ ./programs/git.nix ./programs/gpg.nix ];
+  imports = [ ./programs/git.nix ./programs/gpg.nix ./scripts ];
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
   home.username = "hnaderi";
