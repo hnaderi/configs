@@ -138,7 +138,6 @@
         "helm"
       ];
     };
-    # initExtra = "export HTTP_PROXY=http://rpi4:8889 HTTPS_PROXY=http://rpi4:8889";
   };
 
   programs.fzf = {
