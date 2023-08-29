@@ -88,7 +88,18 @@
   programs.rofi = {
     enable = true;
     theme = "purple";
-    terminal = "${pkgs.konsole}/bin/konsole";
+    terminal = "${pkgs.yakuake}/bin/yakuake";
+    plugins = with pkgs; [
+      rofi-calc
+      rofi-pass
+      rofi-file-browser
+      rofi-power-menu
+      rofi-emoji
+    ];
+    extraConfig = {
+      modi = "window,drun,run,ssh,combi,emoji,calc,filebrowser,keys";
+      combi-modi = "window,drun,run,ssh,combi,emoji,calc,filebrowser,keys";
+    };
   };
 
   programs.direnv = {
