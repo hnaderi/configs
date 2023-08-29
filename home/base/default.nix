@@ -97,8 +97,8 @@
       rofi-emoji
     ];
     extraConfig = {
-      modi = "window,drun,run,ssh,combi,emoji,calc,filebrowser,keys";
-      combi-modi = "window,drun,run,ssh,combi,emoji,calc,filebrowser,keys";
+      modi = "window,drun,ssh,combi,emoji,calc,filebrowser,keys";
+      combi-modi = "window,drun,ssh,combi,emoji,calc,filebrowser,keys";
     };
   };
 
