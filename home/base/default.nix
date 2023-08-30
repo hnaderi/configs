@@ -4,7 +4,8 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
-  imports = [ ./programs/git.nix ./programs/gpg.nix ./scripts ];
+  imports =
+    [ ./programs/zsh.nix ./programs/git.nix ./programs/gpg.nix ./scripts ];
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
   home.username = "hnaderi";
@@ -118,38 +119,6 @@
   programs.htop = { enable = true; };
 
   programs.tmux = { enable = true; };
-
-  programs.zsh = {
-    enable = true;
-    enableAutosuggestions = true;
-    history.extended = true;
-    shellAliases = {
-      fa2en = "sed -e 'y/۰۱۲۳۴۵۶۷۸۹/0123456789/'";
-      ".." = "cd ..";
-      clip = "${pkgs.xclip}/bin/xclip -se c";
-    };
-    oh-my-zsh = {
-      enable = true;
-      theme = "nicoulaj";
-      plugins = [
-        "git"
-        "gitignore"
-        "sudo"
-        "pass"
-        "man"
-        "rsync"
-        "sbt"
-        "scala"
-        "systemd"
-        "autojump"
-
-        "terraform"
-
-        "kubectl"
-        "helm"
-      ];
-    };
-  };
 
   programs.fzf = {
     enable = true;
