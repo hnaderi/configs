@@ -35,6 +35,7 @@
     shellcheck
     rnix-lsp
     nixfmt
+    yaml-language-server
 
     # Spell checking
     ispell
