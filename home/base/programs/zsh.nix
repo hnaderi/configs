@@ -24,6 +24,7 @@ in {
         "rsync"
         "sbt"
         "scala"
+        "poetry"
         "systemd"
         "autojump"
 
