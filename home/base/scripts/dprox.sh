@@ -2,8 +2,7 @@
 
 CMD=$1
 SVC="${2:-nix-daemon}"
-PROXY_ENV="${http_proxy:-$HTTP_PROXY}"
-PROXY="${PROXY_ENV:-localhost:9999}"
+PROXY="${3:-socks5://localhost:9999}"
 
 BASE_DIR=/run/systemd/system
 SVC_DIR="$BASE_DIR/$SVC.service.d"
