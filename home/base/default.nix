@@ -37,6 +37,10 @@
     nixfmt
     yaml-language-server
 
+    docker-compose
+    kubectl
+    kubernetes-helm
+
     # Spell checking
     ispell
     aspell

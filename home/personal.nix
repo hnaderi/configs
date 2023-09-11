@@ -16,10 +16,6 @@
     calibre
     spotify
 
-    docker-compose
-    kubectl
-    kubernetes-helm
-
     wireshark
 
     dbeaver
