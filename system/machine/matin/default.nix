@@ -5,10 +5,9 @@
 { config, pkgs, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    ];
+  imports = [ # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+  ];
 
   # Bootloader.
   boot.loader.grub.enable = true;
@@ -16,17 +15,18 @@
   boot.loader.grub.useOSProber = true;
 
   # Setup keyfile
-  boot.initrd.secrets = {
-    "/crypto_keyfile.bin" = null;
-  };
+  boot.initrd.secrets = { "/crypto_keyfile.bin" = null; };
 
   # Enable grub cryptodisk
-  boot.loader.grub.enableCryptodisk=true;
+  boot.loader.grub.enableCryptodisk = true;
 
-  boot.initrd.luks.devices."luks-78f7db1a-4003-4ff3-ae0b-88155199ef44".keyFile = "/crypto_keyfile.bin";
+  boot.initrd.luks.devices."luks-78f7db1a-4003-4ff3-ae0b-88155199ef44".keyFile =
+    "/crypto_keyfile.bin";
   # Enable swap on luks
-  boot.initrd.luks.devices."luks-1d670767-1be1-48ae-beb8-9edee7c04d4d".device = "/dev/disk/by-uuid/1d670767-1be1-48ae-beb8-9edee7c04d4d";
-  boot.initrd.luks.devices."luks-1d670767-1be1-48ae-beb8-9edee7c04d4d".keyFile = "/crypto_keyfile.bin";
+  boot.initrd.luks.devices."luks-1d670767-1be1-48ae-beb8-9edee7c04d4d".device =
+    "/dev/disk/by-uuid/1d670767-1be1-48ae-beb8-9edee7c04d4d";
+  boot.initrd.luks.devices."luks-1d670767-1be1-48ae-beb8-9edee7c04d4d".keyFile =
+    "/crypto_keyfile.bin";
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   networking.hostName = "matin"; # Define your hostname.
@@ -58,7 +58,7 @@
     ${pkgs.xorg.xrandr}/bin/xrandr --newmode "1400x1050_60.00"  122.61  1400 1488 1640 1880  1050 1051 1054 1087  -HSync +Vsync
     ${pkgs.xorg.xrandr}/bin/xrandr --addmode VGA-1 "1400x1050_60.00"
     ${pkgs.xorg.xrandr}/bin/xrandr --output VGA-1 --mode "1400x1050_60.00"
-'';
+  '';
 
   # Configure keymap in X11
   services.xserver = {
