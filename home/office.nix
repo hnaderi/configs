@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  home.packages = with pkgs; [ docker-compose ];
+  home.packages = with pkgs; [ anydesk ];
 
   _module.args.email = "mail@hnaderi.dev";
   _module.args.sshKey = "E0C3F006EEBECE2F22AF32566C9212726A0768E4";
