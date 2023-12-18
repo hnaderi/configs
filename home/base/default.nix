@@ -57,10 +57,6 @@
 
     libreoffice
 
-    libva-utils
-    glxinfo
-    vdpauinfo
-
     inkscape
     gimp
     okular

@@ -7,7 +7,6 @@
 
   home.packages = with pkgs; [
     skypeforlinux
-    element-desktop
 
     hledger
     hledger-ui
