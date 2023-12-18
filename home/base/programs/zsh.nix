@@ -1,7 +1,6 @@
 { config, lib, pkgs, ... }:
 
-let
-  clip = "${pkgs.xclip}/bin/xclip -se c";
+let clip = "${pkgs.xclip}/bin/xclip -se c";
 in {
   programs.zsh = {
     enable = true;
@@ -34,11 +33,12 @@ in {
         "helm"
       ];
     };
+    localVariables = { EDITOR = "vim"; };
     initExtra = ''
-newpass(){
-  LENGTH=''${1:-50};
-  pwgen -sy "$LENGTH" 1 | ${clip};
-}
-'';
+      newpass(){
+        LENGTH=''${1:-50};
+        pwgen -sy "$LENGTH" 1 | ${clip};
+      }
+    '';
   };
 }
