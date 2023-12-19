@@ -61,6 +61,7 @@
     gimp
     okular
     kcalc
+    gedit
 
     ffmpeg-full
     vlc
