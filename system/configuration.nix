@@ -71,6 +71,7 @@
     # package = pkgs.nixVersions.stable;
     package = pkgs.nixUnstable;
     registry.nixpkgs.flake = inputs.nixpkgs;
+    nixPath = [ "nixpkgs=flake:nixpkgs" ];
 
     settings = {
       # Automate `nix store --optimise`
