@@ -78,25 +78,7 @@
 
   networking = {
     hostName = "behemoth";
-    nameservers = [ "127.0.0.1" "::1" ];
-    # If using dhcpcd:
-    dhcpcd.extraConfig = "nohook resolv.conf";
-    # If using NetworkManager:
     networkmanager.enable = true;
-    networkmanager.dns = "none";
-    extraHosts = ''
-      192.168.1.14    rpi4
-      192.168.1.3     rpizw
-    '';
-  };
-  # https://github.com/NixOS/nixpkgs/issues/61230
-  services.resolved.enable = lib.mkForce false; # just to be sure
-  environment.etc."resolv.conf" = {
-    text = lib.optionalString (config.networking.nameservers != [ ])
-      (lib.concatMapStrings (ns: ''
-        nameserver ${ns}
-      '') config.networking.nameservers);
-    mode = "0444";
   };
 
   networking.firewall.allowedTCPPorts = [ 1716 22000 ];
