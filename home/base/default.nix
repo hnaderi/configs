@@ -28,6 +28,7 @@
 
     # (tomb.override { pinentry = pkgs.pinentry-gtk2; })
     diceware
+    git-crypt
 
     sshuttle
 
