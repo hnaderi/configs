@@ -80,6 +80,7 @@
     hostName = "behemoth";
     networkmanager.enable = true;
   };
+  services.dnsmasq.enable = true;
 
   networking.firewall.allowedTCPPorts = [ 1716 22000 ];
 
