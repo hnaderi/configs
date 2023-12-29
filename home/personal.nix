@@ -24,6 +24,8 @@
 
     webcamoid
     zeroad
+
+    openrgb
   ];
 
   programs.chromium.enable = true;
