@@ -7,6 +7,7 @@
     enable = true;
     enableSshSupport = true;
     sshKeys = [ sshKey ];
+    pinentryFlavor = "qt";
     extraConfig = ''
       allow-emacs-pinentry
       allow-loopback-pinentry
