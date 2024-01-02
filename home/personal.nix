@@ -26,8 +26,6 @@
     zeroad
 
     openrgb
-    wine
-    lutris
   ];
 
   programs.chromium.enable = true;
