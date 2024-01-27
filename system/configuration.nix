@@ -5,6 +5,7 @@
 { config, lib, pkgs, inputs, ... }:
 
 {
+  imports = [ ./warp.nix ];
   virtualisation.docker = {
     enable = true;
     liveRestore = false;
@@ -21,6 +22,7 @@
       enable = true;
       enableTor = true;
     };
+    warp-proxy.enable = true;
   };
 
   programs.zsh.enable = true;
