@@ -25,4 +25,4 @@ jobs:
 
       - name: "Build NixOS config ❄️"
         run: |
-          nix build .#nixosConfigurations.m800.config.system.build.toplevel
+          nix build .#nixosConfigurations.behemoth.config.system.build.toplevel
