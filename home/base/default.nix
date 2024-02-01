@@ -20,6 +20,8 @@
     wget
     pwgen
     autojump
+    dig
+    nvitop
 
     zip
     unzip
