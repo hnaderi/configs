@@ -88,8 +88,7 @@
     package = config.boot.kernelPackages.nvidiaPackages.stable;
   };
 
-  hardware.i2c.enable = true;
-  services.udev.packages = [ pkgs.openrgb ];
+  services.hardware.openrgb.enable = true;
 
   networking = {
     hostName = "behemoth";
