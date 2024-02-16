@@ -26,10 +26,12 @@
   };
 
   programs.zsh.enable = true;
+  programs.wireshark.enable = true;
 
   users.users.hnaderi = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "docker" "adbusers" "vboxusers" "dialout" ];
+    extraGroups =
+      [ "wheel" "docker" "adbusers" "vboxusers" "dialout" "wireshark" ];
     shell = pkgs.zsh;
   };
 
