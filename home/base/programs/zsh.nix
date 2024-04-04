@@ -4,7 +4,7 @@ let clip = "${pkgs.xclip}/bin/xclip -se c";
 in {
   programs.zsh = {
     enable = true;
-    enableAutosuggestions = true;
+    autosuggestion.enable = true;
     history.extended = true;
     shellAliases = {
       fa2en = "sed -e 'y/۰۱۲۳۴۵۶۷۸۹/0123456789/'";

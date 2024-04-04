@@ -36,7 +36,7 @@
 
     fd
     shellcheck
-    rnix-lsp
+    nixd
     nixfmt
     yaml-language-server
 

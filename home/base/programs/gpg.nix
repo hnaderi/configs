@@ -7,7 +7,7 @@
     enable = true;
     enableSshSupport = true;
     sshKeys = [ sshKey ];
-    pinentryFlavor = "qt";
+    pinentryPackage = pkgs.pinentry-qt;
     extraConfig = ''
       allow-emacs-pinentry
       allow-loopback-pinentry
