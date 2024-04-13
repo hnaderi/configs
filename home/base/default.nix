@@ -22,6 +22,7 @@
     autojump
     dig
     nvitop
+    s-tui
 
     zip
     unzip
