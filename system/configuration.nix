@@ -48,7 +48,7 @@
 
     # Flakes settings
     # package = pkgs.nixVersions.stable;
-    package = pkgs.nixUnstable;
+    package = pkgs.nixVersions.latest;
     registry.nixpkgs.flake = inputs.nixpkgs;
     nixPath = [ "nixpkgs=flake:nixpkgs" ];
 

@@ -17,7 +17,7 @@
 
     wireshark
 
-    dbeaver
+    dbeaver-bin
 
     python3
     nodejs_latest
