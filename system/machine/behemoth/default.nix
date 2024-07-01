@@ -39,8 +39,8 @@
   services.xserver.videoDrivers = [ "nvidia" ];
 
   # Enable the Plasma 5 Desktop Environment.
-  services.xserver.displayManager.sddm.enable = true;
-  services.xserver.desktopManager.plasma5.enable = true;
+  services.displayManager.sddm.enable = true;
+  services.desktopManager.plasma6.enable = true;
 
   # Configure keymap in X11
   # services.xserver.xkb.layout = "us";
@@ -66,7 +66,7 @@
     vaapiIntel = pkgs.vaapiIntel.override { enableHybridCodec = true; };
   };
 
-  hardware.opengl = {
+  hardware.graphics = {
     enable = true;
     extraPackages = with pkgs; [
       intel-media-driver # LIBVA_DRIVER_NAME=iHD
@@ -75,8 +75,6 @@
       libvdpau-va-gl
       libva
     ];
-    driSupport = true;
-    driSupport32Bit = true;
   };
 
   hardware.nvidia = {

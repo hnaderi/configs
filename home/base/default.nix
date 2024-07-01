@@ -38,7 +38,7 @@
     fd
     shellcheck
     nixd
-    nixfmt
+    nixfmt-classic
     yaml-language-server
 
     docker-compose
