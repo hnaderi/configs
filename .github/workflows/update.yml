@@ -13,7 +13,7 @@ jobs:
       - name: Install Nix
         uses: DeterminateSystems/nix-installer-action@v1
       - name: Update flake.lock
-        uses: DeterminateSystems/update-flake-lock@v17
+        uses: DeterminateSystems/update-flake-lock@v23
         with:
           token: ${{ secrets.ACCESS_TOKEN }}
           pr-title: "Update flake.lock" # Title of PR to be created
