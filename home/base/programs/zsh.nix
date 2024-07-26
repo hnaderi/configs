@@ -21,11 +21,17 @@ in {
         "pass"
         "man"
         "rsync"
-        "sbt"
-        "scala"
-        "poetry"
         "systemd"
         "autojump"
+
+        "sbt"
+        "scala"
+
+        "poetry"
+
+        "npm"
+        "yarn"
+        "node"
 
         "terraform"
 
