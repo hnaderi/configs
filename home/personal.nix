@@ -22,6 +22,7 @@
     python3
     nodejs_latest
 
+    qucs-s
     webcamoid
     zeroad
 
