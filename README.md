@@ -6,7 +6,7 @@
 ## NixOS system
 
 ```
-nixos-rebuild switch --flake github:hnaderi/configs#m800
+nixos-rebuild switch --flake github:hnaderi/configs#behemoth
 ```
 
 ## Home Manager
