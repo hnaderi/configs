@@ -12,9 +12,6 @@
     hledger-ui
     ledger
 
-    calibre
-    spotify
-
     wireshark
 
     dbeaver-bin
@@ -22,7 +19,6 @@
     python3
     nodejs_latest
 
-    qucs-s
     webcamoid
     zeroad
 
