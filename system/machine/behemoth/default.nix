@@ -49,9 +49,18 @@
   # Enable CUPS to print documents.
   # services.printing.enable = true;
 
-  hardware.pulseaudio = {
+  # hardware.pulseaudio = {
+  #   enable = true;
+  #   package = pkgs.pulseaudioFull;
+  # };
+
+  # Enable sound with pipewire.
+  hardware.pulseaudio.enable = false;
+  services.pipewire = {
     enable = true;
-    package = pkgs.pulseaudioFull;
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
   };
 
   hardware.bluetooth.enable = true;
