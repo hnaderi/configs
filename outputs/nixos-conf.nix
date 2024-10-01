@@ -9,7 +9,5 @@ let
       modules = [ confPath ../system/configuration.nix ];
     };
 in {
-  m800 = mkMachine ../system/machine/m800;
-  matin = mkMachine ../system/machine/matin;
   behemoth = mkMachine ../system/machine/behemoth;
 }
