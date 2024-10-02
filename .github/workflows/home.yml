@@ -12,7 +12,7 @@ on:
       - 'outputs/nixos-conf.nix'
 
 jobs:
-  build:
+  build-home:
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v2.3.2
