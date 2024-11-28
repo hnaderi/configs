@@ -28,5 +28,6 @@
       "metals.sbt"
       ".bsp"
     ];
+    lfs.enable = true;
   };
 }
