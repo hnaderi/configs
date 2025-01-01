@@ -96,23 +96,6 @@
     package = pkgs.emacs;
   };
 
-  programs.rofi = {
-    enable = true;
-    theme = "purple";
-    terminal = "${pkgs.yakuake}/bin/yakuake";
-    plugins = with pkgs; [
-      rofi-calc
-      rofi-pass
-      rofi-file-browser
-      rofi-power-menu
-      rofi-emoji
-    ];
-    extraConfig = {
-      modi = "window,drun,ssh,combi,emoji,calc,filebrowser,keys";
-      combi-modi = "window,drun,ssh,combi,emoji,calc,filebrowser,keys";
-    };
-  };
-
   programs.direnv = {
     enable = true;
     enableZshIntegration = true;
