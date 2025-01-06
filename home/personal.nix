@@ -20,7 +20,6 @@
     nodejs_latest
 
     webcamoid
-    zeroad
 
     openrgb
   ];
