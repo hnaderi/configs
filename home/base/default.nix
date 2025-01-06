@@ -132,4 +132,12 @@
   };
 
   services.syncthing = { enable = true; };
+
+  nix = {
+    gc = {
+      automatic = true;
+      frequency = "monthly";
+      options = "--delete-older-than 30d";
+    };
+  };
 }
