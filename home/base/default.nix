@@ -63,6 +63,7 @@
 
     inkscape
     gimp
+    libheif
     okular
     kcalc
     gedit
