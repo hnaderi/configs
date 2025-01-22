@@ -31,7 +31,6 @@
 
   services.kdeconnect = {
     enable = true;
-    indicator = true;
   };
 
   services.syncthing = { enable = true; };
