@@ -21,6 +21,9 @@
 
     webcamoid
 
+    freecad
+    kicad-small
+
     openrgb
   ];
 
