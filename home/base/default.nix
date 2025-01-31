@@ -41,9 +41,9 @@
     nixfmt-classic
     yaml-language-server
 
-    docker-compose
     kubectl
     kubernetes-helm
+    lazydocker
 
     # Spell checking
     ispell
