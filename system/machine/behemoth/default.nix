@@ -89,6 +89,8 @@
     package = config.boot.kernelPackages.nvidiaPackages.stable;
   };
 
+  hardware.ledger.enable = true;
+
   services.hardware.openrgb.enable = true;
 
   networking = {

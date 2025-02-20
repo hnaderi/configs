@@ -32,6 +32,8 @@
     # (tomb.override { pinentry = pkgs.pinentry-gtk2; })
     diceware
     git-crypt
+    ledger-live-desktop
+    python3Packages.ledgerwallet
 
     sshuttle
 
