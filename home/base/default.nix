@@ -27,7 +27,7 @@
     zip
     unzip
     unrar
-    ark
+    kdePackages.ark
 
     # (tomb.override { pinentry = pkgs.pinentry-gtk2; })
     diceware
@@ -59,20 +59,20 @@
 
     ntfs3g
 
-    yakuake
+    kdePackages.yakuake
 
     libreoffice
 
     inkscape
     gimp
     libheif
-    okular
-    kcalc
+    kdePackages.okular
+    kdePackages.kcalc
     gedit
 
     ffmpeg-full
     vlc
-    gwenview
+    kdePackages.gwenview
 
     # Fonts
     ## Farsi
