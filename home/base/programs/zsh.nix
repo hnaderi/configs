@@ -40,7 +40,7 @@ in {
       ];
     };
     localVariables = { EDITOR = "vim"; };
-    initExtra = ''
+    initContent = ''
       newpass(){
         LENGTH=''${1:-50};
         pwgen -sy "$LENGTH" 1 | ${clip};
