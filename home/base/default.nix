@@ -72,6 +72,7 @@
 
     ffmpeg-full
     vlc
+    mpv
     kdePackages.gwenview
 
     # Fonts
