@@ -6,7 +6,7 @@
   _module.args.gpgKey = "EDCDD60BA926A748";
 
   home.packages = with pkgs; [
-    skypeforlinux
+    teams-for-linux
 
     hledger
     hledger-ui
