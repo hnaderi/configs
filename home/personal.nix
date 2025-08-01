@@ -25,13 +25,18 @@
     kicad-small
 
     openrgb
+
+    v2raya
+    xray
+    v2ray
+    pingtunnel
+
+    zeroad
   ];
 
   programs.chromium.enable = true;
 
-  services.kdeconnect = {
-    enable = true;
-  };
+  services.kdeconnect = { enable = true; };
 
   services.syncthing = { enable = true; };
 

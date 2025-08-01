@@ -100,6 +100,10 @@
     networkmanager.enable = true;
   };
   services.dnsmasq.enable = true;
+  services.v2raya = {
+    enable = true;
+    # cliPackage = pkgs.xray;
+  };
 
   networking.firewall.allowedTCPPorts = [ 1716 22000 ];
 
