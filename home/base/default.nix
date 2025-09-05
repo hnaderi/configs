@@ -16,6 +16,7 @@
     ripgrep
     killall
     bc
+    nettools
     nethogs
     wget
     pwgen
