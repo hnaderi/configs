@@ -18,6 +18,10 @@
 
     python3
     nodejs_latest
+    ccls
+    clang-tools
+    semgrep
+    platformio
 
     webcamoid
 

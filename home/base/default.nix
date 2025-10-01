@@ -99,6 +99,12 @@
   programs.emacs = {
     enable = true;
     package = pkgs.emacs;
+    extraPackages = epkgs:
+      with epkgs; [
+        tree-sitter
+        tree-sitter-langs
+        treesit-grammars.with-all-grammars
+      ];
   };
 
   programs.direnv = {
