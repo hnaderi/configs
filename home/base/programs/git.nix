@@ -3,13 +3,18 @@
 {
   programs.git = {
     enable = true;
-    userName = "Hossein Naderi";
-    userEmail = email;
+    settings = {
+      user = {
+        name = "Hossein Naderi";
+        email = email;
+      };
+      init = { defaultBranch = "main"; };
+    };
     signing = {
       key = gpgKey;
       signByDefault = true;
     };
-    extraConfig = { init = { defaultBranch = "main"; }; };
+
     # ToDo
     ignores = [
       # Emacs
