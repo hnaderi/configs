@@ -34,7 +34,6 @@
     diceware
     git-crypt
     ledger-live-desktop
-    python3Packages.ledgerwallet
 
     sshuttle
 
@@ -56,7 +55,7 @@
     aspellDicts.en-computers
     aspellDicts.en-science
 
-    tdesktop
+    telegram-desktop
 
     ntfs3g
 
