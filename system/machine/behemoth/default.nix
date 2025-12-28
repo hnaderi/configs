@@ -101,6 +101,7 @@
       enable = true;
       dns = "none";
     };
+    modemmanager.enable = false;
   };
 
   services.dnscrypt-proxy = {
