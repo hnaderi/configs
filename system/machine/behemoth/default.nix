@@ -38,11 +38,12 @@
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
-  services.xserver.videoDrivers = [ "nvidia" ];
+  # services.xserver.videoDrivers = [ "nvidia" ];
 
-  # Enable the Plasma 5 Desktop Environment.
-  services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
+  services.displayManager.sddm.enable = true;
+  services.displayManager.sddm.wayland.enable = true;
+  services.displayManager.defaultSession = "plasmax11";
 
   # Configure keymap in X11
   # services.xserver.xkb.layout = "us";
@@ -67,20 +68,9 @@
 
   hardware.bluetooth.enable = true;
 
-  nixpkgs.config.packageOverrides = pkgs: {
-    intel-vaapi-driver =
-      pkgs.intel-vaapi-driver.override { enableHybridCodec = true; };
-  };
-
   hardware.graphics = {
     enable = true;
-    extraPackages = with pkgs; [
-      intel-media-driver # LIBVA_DRIVER_NAME=iHD
-      intel-vaapi-driver # LIBVA_DRIVER_NAME=i965 (older but works better for Firefox/Chromium)
-      libva-vdpau-driver
-      libvdpau-va-gl
-      libva
-    ];
+    extraPackages = with pkgs; [ libva-vdpau-driver libvdpau-va-gl libva ];
   };
 
   hardware.nvidia = {
