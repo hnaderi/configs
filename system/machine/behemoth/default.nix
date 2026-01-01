@@ -38,24 +38,11 @@
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
-  # services.xserver.videoDrivers = [ "nvidia" ];
+  services.xserver.videoDrivers = [ "nvidia" ];
 
-  services.desktopManager.plasma6.enable = true;
   services.displayManager.sddm.enable = true;
   services.displayManager.sddm.wayland.enable = true;
-  services.displayManager.defaultSession = "plasmax11";
-
-  # Configure keymap in X11
-  # services.xserver.xkb.layout = "us";
-  # services.xserver.xkb.options = "eurosign:e,caps:escape";
-
-  # Enable CUPS to print documents.
-  # services.printing.enable = true;
-
-  # hardware.pulseaudio = {
-  #   enable = true;
-  #   package = pkgs.pulseaudioFull;
-  # };
+  services.desktopManager.plasma6.enable = true;
 
   # Enable sound with pipewire.
   services.pulseaudio.enable = false;
@@ -70,14 +57,21 @@
 
   hardware.graphics = {
     enable = true;
-    extraPackages = with pkgs; [ libva-vdpau-driver libvdpau-va-gl libva ];
+    extraPackages = with pkgs; [
+      intel-media-driver # For Broadwell (2014) or newer processors. LIBVA_DRIVER_NAME=iHD
+      intel-vaapi-driver # For older processors. LIBVA_DRIVER_NAME=i965
+    ];
   };
+  environment.sessionVariables = {
+    LIBVA_DRIVER_NAME = "iHD";
+  }; # Optionally, set the environment variable
 
   hardware.nvidia = {
     modesetting.enable = true;
     powerManagement.enable = true;
     open = true;
     nvidiaSettings = true;
+    package = config.boot.kernelPackages.nvidiaPackages.stable;
   };
 
   hardware.ledger.enable = true;

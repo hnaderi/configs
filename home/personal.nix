@@ -1,6 +1,26 @@
 { config, pkgs, ... }:
+let
+  freecad-fixed = pkgs.symlinkJoin {
+    name = "freecad-wayland-fix";
+    paths = [ pkgs.freecad-wayland ];
+    buildInputs = [ pkgs.makeWrapper ];
+    postBuild = ''
+      wrapProgram $out/bin/FreeCAD \
+        --prefix MESA_LOADER_DRIVER_OVERRIDE : zink \
+        --prefix __EGL_VENDOR_LIBRARY_FILENAMES : ${pkgs.mesa}/share/glvnd/egl_vendor.d/50_mesa.json \
+    '';
+  };
+  orca-slicer-fixed = pkgs.symlinkJoin {
+    name = "orca-slicer-fix";
+    paths = [ pkgs.orca-slicer ];
+    buildInputs = [ pkgs.makeWrapper ];
+    postBuild = ''
+      wrapProgram $out/bin/orca-slicer \
+        --prefix GBM_BACKEND : dri \
+    '';
+  };
 
-{
+in {
   _module.args.email = "hossein-naderi@hotmail.com";
   _module.args.sshKey = "9B581799742D880ECDFBA8EF753064D952BCEFBA";
   _module.args.gpgKey = "EDCDD60BA926A748";
@@ -24,8 +44,8 @@
 
     webcamoid
 
-    freecad
-    orca-slicer
+    freecad-fixed
+    orca-slicer-fixed
     kicad-small
 
     openrgb
