@@ -22,6 +22,7 @@
       enableTor = true;
     };
   };
+  services.cloudflare-warp.enable = true;
 
   programs.zsh.enable = true;
   programs.wireshark.enable = true;

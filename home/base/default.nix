@@ -35,6 +35,7 @@
     git-crypt
     ledger-live-desktop
 
+    cloudflare-warp
     sshuttle
 
     fd
