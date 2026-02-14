@@ -41,7 +41,7 @@
     fd
     shellcheck
     nixd
-    nixfmt-classic
+    nixfmt
     yaml-language-server
 
     kubectl
