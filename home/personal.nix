@@ -55,6 +55,8 @@ in {
     v2ray
     pingtunnel
 
+    calibre
+
     zeroad
   ];
 
